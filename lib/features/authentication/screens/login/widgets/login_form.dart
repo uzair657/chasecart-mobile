@@ -1,3 +1,4 @@
+import 'package:chasecart/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:chasecart/features/authentication/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -47,8 +48,9 @@ class TLoginForm extends StatelessWidget {
                     const Text(TTexts.rememberMe),
                   ],
                 ),
-                TextButton(onPressed: (){}, child: const Text(TTexts.forgetPassword),),
-                /// Forgot Password
+                /// Forget Password
+                TextButton(onPressed: ()=>Get.to(()=>const ForgetPassword()), child: const Text(TTexts.forgetPassword),),
+                
               ],
             ),
 

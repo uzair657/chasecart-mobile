@@ -1,5 +1,7 @@
+import 'package:chasecart/features/authentication/screens/signup/verify_email.dart';
 import 'package:chasecart/features/authentication/screens/signup/widgets/terms_condition_checkbox.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/colors.dart';
@@ -10,10 +12,7 @@ import '../../../../../utils/helpers/helper_functions.dart';
 class TSignupForm extends StatelessWidget {
   const TSignupForm({
     super.key,
-
   });
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +61,7 @@ class TSignupForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: TTexts.email,
-                prefixIcon: Icon(Iconsax.direct)),
+                labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct)),
           ),
           const SizedBox(
             height: TSizes.spaceBtwInputFields,
@@ -73,8 +71,7 @@ class TSignupForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-                labelText: TTexts.phoneNo,
-                prefixIcon: Icon(Iconsax.call)),
+                labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
           ),
           const SizedBox(
             height: TSizes.spaceBtwInputFields,
@@ -93,11 +90,17 @@ class TSignupForm extends StatelessWidget {
           /// Terms and Conditions
           const TTermsConditionCheckbox(),
           const SizedBox(height: TSizes.spaceBtwSections),
+
           /// Signup Button
-          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: (){},child: const Text(TTexts.createAccount),),)
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () => Get.to(() => const VerifyEmailScreen()),
+              child: const Text(TTexts.createAccount),
+            ),
+          )
         ],
       ),
     );
   }
 }
-
