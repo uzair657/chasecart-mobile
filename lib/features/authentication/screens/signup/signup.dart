@@ -1,12 +1,9 @@
-import 'package:chasecart/app.dart';
 import 'package:chasecart/common/widgets/login_signup/form_divider.dart';
 import 'package:chasecart/common/widgets/login_signup/social_button.dart';
 import 'package:chasecart/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 
-import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/constants/text_strings.dart';
 import '../../../../utils/helpers/helper_functions.dart';
@@ -16,7 +13,6 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(

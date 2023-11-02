@@ -2,7 +2,6 @@ import 'package:chasecart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/text_strings.dart';
 
 class TFormDivider extends StatelessWidget {
   const TFormDivider({

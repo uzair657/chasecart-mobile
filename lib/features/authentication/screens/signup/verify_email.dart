@@ -1,4 +1,3 @@
-import 'package:chasecart/app.dart';
 import 'package:chasecart/common/widgets/success_screen/success_screen.dart';
 import 'package:chasecart/features/authentication/screens/login/login.dart';
 import 'package:chasecart/utils/constants/image_strings.dart';
