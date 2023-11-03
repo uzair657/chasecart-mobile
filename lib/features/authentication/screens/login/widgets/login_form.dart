@@ -57,7 +57,7 @@ class TLoginForm extends StatelessWidget {
 
             const SizedBox(height: TSizes.spaceBtwSections),
             /// Sign In Button
-            SizedBox(width:double.infinity, child: ElevatedButton(onPressed: ()=>Get.to(()=>NavigationMenu()), child: const Text(TTexts.signIn),)),
+            SizedBox(width:double.infinity, child: ElevatedButton(onPressed: ()=>Get.to(()=>const NavigationMenu()), child: const Text(TTexts.signIn),)),
             const SizedBox(height: TSizes.spaceBtwItems),
             /// Create ACCOUNT Button
             SizedBox(width:double.infinity, child: OutlinedButton(onPressed: ()=> Get.to(()=> const SignupScreen()), child: const Text(TTexts.createAccount),)),

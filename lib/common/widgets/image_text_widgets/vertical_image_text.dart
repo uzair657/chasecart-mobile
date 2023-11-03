@@ -39,7 +39,7 @@ class TVerticalImageText extends StatelessWidget {
                 child: Image(image: AssetImage(image), fit:BoxFit.cover, color: darkMode ? TColors.light : TColors.dark,),
               ),
             ),
-            SizedBox(height: TSizes.spaceBtwItems / 2),
+            const SizedBox(height: TSizes.spaceBtwItems / 2),
             SizedBox(
                 width:55,
                 child: Text(title,

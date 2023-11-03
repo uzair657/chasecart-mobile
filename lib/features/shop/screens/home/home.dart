@@ -1,6 +1,7 @@
 import 'package:chasecart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:chasecart/features/shop/screens/home/widgets/home_categories.dart';
-
+import 'package:chasecart/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:chasecart/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
@@ -47,12 +48,23 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            /// Body
+            const Padding(
+              padding: EdgeInsets.all(TSizes.defaultSpace),
+              child: TPromoSlider(banners: [TImages.promoBanner3,TImages.promoBanner2,TImages.promoBanner1],),
+
+
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
+
+
 
 
 
