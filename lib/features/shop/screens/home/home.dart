@@ -1,3 +1,5 @@
+import 'package:chasecart/common/widgets/products/product_cards/product_card_horizontal.dart';
+import 'package:chasecart/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:chasecart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:chasecart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:chasecart/features/shop/screens/home/widgets/promo_slider.dart';
@@ -51,7 +53,14 @@ class HomeScreen extends StatelessWidget {
             /// Body
             const Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(banners: [TImages.promoBanner3,TImages.promoBanner2,TImages.promoBanner1],),
+              child: Column(
+                children: [
+                  /// Promo Slider
+                  TPromoSlider(banners: [TImages.promoBanner3,TImages.promoBanner2,TImages.promoBanner1],),
+                  /// Popular Products
+                  TProductCardVertical(),
+                ],
+              ),
 
 
             ),
