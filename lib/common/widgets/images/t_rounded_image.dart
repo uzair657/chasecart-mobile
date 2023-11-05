@@ -40,7 +40,6 @@ class TRoundedImage extends StatelessWidget {
           border: border,
           color: backgroundColor,
           borderRadius: BorderRadius.circular(borderRadius),
-
         ),
         child:  ClipRRect(borderRadius: applyImageRadius ? BorderRadius.circular(borderRadius) : BorderRadius.zero,
             child: Image(image: isNetworkImage ? NetworkImage(imageUrl): AssetImage(TImages.promoBanner1) as ImageProvider,
