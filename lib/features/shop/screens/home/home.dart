@@ -52,12 +52,15 @@ class HomeScreen extends StatelessWidget {
             ),
             /// Body
              Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
                   /// Promo Slider
                   const TPromoSlider(banners: [TImages.promoBanner2,TImages.promoBanner3,TImages.promoBanner1],),
                   const SizedBox(height: TSizes.spaceBtwSections),
+                  /// Heading
+                  TSectionHeading(title: 'Popular Products',onPressed: (){},),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
                   /// Popular Products
                   TGridLayout(itemCount: 4, itemBuilder: (_,index)=>const TProductCardVertical(),),
                 ],

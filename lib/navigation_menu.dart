@@ -1,4 +1,5 @@
 import 'package:chasecart/features/shop/screens/home/home.dart';
+import 'package:chasecart/features/shop/screens/store/store_screen.dart';
 import 'package:chasecart/utils/constants/colors.dart';
 import 'package:chasecart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.purple,),
+    const StoreScreen(),
     Container(color: Colors.orange,),
     Container(color: Colors.blue,),
   ];
