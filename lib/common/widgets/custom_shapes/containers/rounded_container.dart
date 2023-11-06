@@ -35,6 +35,7 @@ import 'package:flutter/material.dart';
          borderRadius: BorderRadius.circular(radius),
          border: showBorder ? Border.all(color: borderColor) : null
        ),
+       child: child,
      );
    }
  }

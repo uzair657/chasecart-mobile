@@ -1,4 +1,3 @@
-import 'package:chasecart/common/widgets/products/product_cards/product_card_horizontal.dart';
 import 'package:chasecart/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:chasecart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:chasecart/features/shop/screens/home/widgets/home_categories.dart';
@@ -7,6 +6,7 @@ import 'package:chasecart/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layout/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/sizes.dart';
 
@@ -51,15 +51,15 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             /// Body
-            const Padding(
+             Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
                   /// Promo Slider
-                  TPromoSlider(banners: [TImages.promoBanner3,TImages.promoBanner2,TImages.promoBanner1],),
+                  const TPromoSlider(banners: [TImages.promoBanner2,TImages.promoBanner3,TImages.promoBanner1],),
                   const SizedBox(height: TSizes.spaceBtwSections),
                   /// Popular Products
-                  TProductCardVertical(),
+                  TGridLayout(itemCount: 4, itemBuilder: (_,index)=>const TProductCardVertical(),),
                 ],
               ),
 
@@ -71,6 +71,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
