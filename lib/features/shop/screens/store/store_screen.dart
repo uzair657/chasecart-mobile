@@ -69,13 +69,11 @@ class StoreScreen extends StatelessWidget {
         },
           body:const TabBarView(
             children:[
-
               TCategoryTab(),
               TCategoryTab(),
               TCategoryTab(),
               TCategoryTab(),
               TCategoryTab(),
-
             ],
         ),
         ),
