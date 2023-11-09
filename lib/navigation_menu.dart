@@ -1,3 +1,4 @@
+import 'package:chasecart/features/personalization/screens/settings/settings.dart';
 import 'package:chasecart/features/shop/screens/home/home.dart';
 import 'package:chasecart/features/shop/screens/store/store_screen.dart';
 import 'package:chasecart/features/shop/screens/wishlist/wishlist.dart';
@@ -42,6 +43,6 @@ class NavigationController extends GetxController {
     const HomeScreen(),
     const StoreScreen(),
     const FavouriteScreen(),
-    Container(color: Colors.blue,),
+    const SettingsScreen(),
   ];
 }
