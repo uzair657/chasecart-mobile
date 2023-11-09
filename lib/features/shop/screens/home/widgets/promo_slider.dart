@@ -15,7 +15,6 @@ class TPromoSlider extends StatelessWidget {
   });
 
   final List<String> banners;
-  // just wow
 
   @override
   Widget build(BuildContext context) {
