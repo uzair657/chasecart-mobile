@@ -2,8 +2,10 @@ import 'package:chasecart/common/widgets/appbar/appbar.dart';
 import 'package:chasecart/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:chasecart/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:chasecart/common/widgets/texts/section_heading.dart';
+import 'package:chasecart/features/personalization/screens/profile/profile.dart';
 import 'package:chasecart/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
@@ -23,7 +25,7 @@ class SettingsScreen extends StatelessWidget {
                   children: [
                     TAppBar(title: Text('Account',style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white),),),
                     /// User Profile
-                    const TUserProfileTitle(),
+                    TUserProfileTitle(onPressed: ()=> Get.to( const ProfileScreen()),),
                     const SizedBox(height: TSizes.spaceBtwSections,),
                   ],
             )),
