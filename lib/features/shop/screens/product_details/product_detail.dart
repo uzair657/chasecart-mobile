@@ -1,5 +1,6 @@
 
 import 'package:chasecart/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
+import 'package:chasecart/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:chasecart/features/shop/screens/product_details/widgets/rating_share_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,9 @@ class ProductDetailScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     /// Rating and share Button
-                    TRatingShare()
+                    TRatingShare(),
+                    /// Price , Title , Stock, & Brand
+                    TProductMetaData(),
                   ],
                 ),
               ),
