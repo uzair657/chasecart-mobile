@@ -6,7 +6,6 @@ import 'package:chasecart/common/widgets/texts/product_title_text.dart';
 import 'package:chasecart/utils/constants/enums.dart';
 import 'package:chasecart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/image_strings.dart';
@@ -34,7 +33,7 @@ class TProductMetaData extends StatelessWidget {
             /// Price
             Text('\$270', style: Theme.of(context).textTheme.titleSmall!.apply(decoration: TextDecoration.lineThrough),),
             const SizedBox(width: TSizes.spaceBtwItems),
-            TProductPriceText(price: '175',isLarge: true,),
+            const TProductPriceText(price: '175',isLarge: true,),
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwItems/1.5,),
