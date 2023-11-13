@@ -51,7 +51,7 @@ class TProductMetaData extends StatelessWidget {
         ),
         const SizedBox(height: TSizes.spaceBtwItems/1.5,),
 
-        /// Brand
+        /// Brands
         Row(
           children: [
             TCircularImage(
