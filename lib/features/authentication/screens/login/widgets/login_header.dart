@@ -21,6 +21,7 @@ class TLoginHeader extends StatelessWidget {
           image: AssetImage(
               dark ? TImages.lightAppLogo : TImages.darkAppLogo),
           height: 150,
+          width: 150,
         ),
         Text(
           TTexts.loginTitle,
