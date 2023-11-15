@@ -9,7 +9,7 @@ class TLoginHeader extends StatelessWidget {
     super.key,
     required this.dark,
   });
-
+/// For dark and light theme
   final bool dark;
 
   @override
