@@ -1,4 +1,5 @@
 
+import 'package:chasecart/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:chasecart/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:chasecart/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:chasecart/features/shop/screens/product_details/widgets/rating_share_widget.dart';
@@ -29,6 +30,11 @@ class ProductDetailScreen extends StatelessWidget {
                     TRatingShare(),
                     /// Price , Title , Stock, & Brand
                     TProductMetaData(),
+                    /// Attributes
+                    TProductAttributes(),
+                    /// Checkout Button
+                    /// Description
+                    /// Reviews
                   ],
                 ),
               ),
