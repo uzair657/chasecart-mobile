@@ -1,5 +1,6 @@
 
 import 'package:chasecart/common/widgets/texts/section_heading.dart';
+import 'package:chasecart/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
 import 'package:chasecart/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:chasecart/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:chasecart/features/shop/screens/product_details/widgets/product_meta_data.dart';
@@ -15,6 +16,7 @@ class ProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // final isDark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      bottomNavigationBar: const TBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
 
