@@ -14,7 +14,7 @@ class ProductDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final isDark = THelperFunctions.isDarkMode(context);
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
 
@@ -32,7 +32,9 @@ class ProductDetailScreen extends StatelessWidget {
                     TProductMetaData(),
                     /// Attributes
                     TProductAttributes(),
+                    SizedBox(height: TSizes.spaceBtwSections,),
                     /// Checkout Button
+                    SizedBox(width:double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text('Checkout')))
                     /// Description
                     /// Reviews
                   ],
