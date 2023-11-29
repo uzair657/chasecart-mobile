@@ -2,6 +2,7 @@ import 'package:chasecart/common/widgets/appbar/appbar.dart';
 import 'package:chasecart/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:chasecart/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:chasecart/common/widgets/texts/section_heading.dart';
+import 'package:chasecart/features/personalization/screens/address/address.dart';
 import 'package:chasecart/features/personalization/screens/profile/profile.dart';
 import 'package:chasecart/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class SettingsScreen extends StatelessWidget {
                   const TSectionHeading(title: 'Account Settings',showActionButton: false,),
                   const SizedBox(height: TSizes.spaceBtwItems,),
 
-                  const SettingsMenuTile(title: 'My Address', subTitle:'Set Shopping delivery address', icon:Iconsax.safe_home,),
+                   SettingsMenuTile(title: 'My Address', subTitle:'Set Shopping delivery address', icon:Iconsax.safe_home,onTap:()=> Get.to(()=>const UserAddressScreen()),),
                   const SettingsMenuTile(title: 'My Cart', subTitle:'Add, remove products and move to checkout', icon:Iconsax.shopping_cart,),
                   const SettingsMenuTile(title: 'My Orders', subTitle:'In-Progress and Completed Orders', icon:Iconsax.bag_tick,),
                   const SettingsMenuTile(title: 'Bank Account', subTitle:'Withdraw balance to registered bank account', icon:Iconsax.bank,),
