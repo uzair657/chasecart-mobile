@@ -11,6 +11,7 @@ class UserAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ///DaRK Mode
+    final dark = THelperFunctions.isDarkMode(context);
     final isDark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       floatingActionButton: FloatingActionButton(
