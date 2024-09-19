@@ -1,6 +1,8 @@
 import 'package:chasecart/common/widgets/appbar/appbar.dart';
 import 'package:chasecart/features/personalization/screens/address/add_new_address.dart';
+import 'package:chasecart/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:chasecart/utils/constants/colors.dart';
+import 'package:chasecart/utils/constants/sizes.dart';
 import 'package:chasecart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,6 +23,18 @@ class UserAddressScreen extends StatelessWidget {
       ),
       appBar: TAppBar(
         title: Text('Addresses',style: Theme.of(context).textTheme.headlineSmall,),
+      ),
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(TSizes.defaultSpace),
+          child: Column(
+            children: [
+              TSingleAddress(selectedAddress: false),
+              TSingleAddress(selectedAddress: true),
+              TSingleAddress(selectedAddress: false),
+            ],
+          ),
+        ),
       ),
     );
   }
