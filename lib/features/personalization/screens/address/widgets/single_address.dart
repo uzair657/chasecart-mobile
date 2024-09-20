@@ -31,7 +31,7 @@ class TSingleAddress extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Uzair Ahmad",
+              Text("Uzair",
               maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
