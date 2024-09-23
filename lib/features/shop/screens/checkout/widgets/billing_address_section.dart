@@ -1,47 +1,39 @@
+import 'package:chasecart/common/widgets/texts/section_heading.dart';
 import 'package:chasecart/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+
 class TBillingAddressSection extends StatelessWidget {
   const TBillingAddressSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        /// SubTotal
+        TSectionHeading(
+          title: "Shipping Address",
+          buttonTitle: "Change",
+          onPressed: (){},
+        ),
+        Text("Uzair Ahmad",style: Theme.of(context).textTheme.bodyLarge),
+        const SizedBox(height: TSizes.spaceBtwItems/2,),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Subtotal",style: Theme.of(context).textTheme.bodyMedium,),
-            Text("\$269.0",style: Theme.of(context).textTheme.bodyMedium,),
+            const Icon(Icons.phone, color: Colors.grey,size: 16),
+            const SizedBox(width: TSizes.spaceBtwItems),
+            Text("+92 3097250069", style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems / 2,),
-        /// Shipping Fee
+        const SizedBox(height: TSizes.spaceBtwItems/2,),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Shipping Fee",style: Theme.of(context).textTheme.bodyMedium,),
-            Text("\$2.0",style: Theme.of(context).textTheme.labelLarge,),
+            const Icon(Icons.location_history, color: Colors.grey,size: 16),
+            const SizedBox(width: TSizes.spaceBtwItems),
+            Expanded(child: Text("8/4 Shahjamal, Lahore", style: Theme.of(context).textTheme.bodyMedium,softWrap: true,)),
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems / 2,),
-        /// Tax Fee
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Tax Fee",style: Theme.of(context).textTheme.bodyMedium,),
-            Text("\$8.0",style: Theme.of(context).textTheme.labelLarge,),
-          ],
-        ),
-        const SizedBox(height: TSizes.spaceBtwItems / 2,),
-        /// Order Total
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Order Total",style: Theme.of(context).textTheme.bodyMedium,),
-            Text("\$279.0",style: Theme.of(context).textTheme.titleMedium,),
-          ],
-        ),
+
       ],
     );
   }
