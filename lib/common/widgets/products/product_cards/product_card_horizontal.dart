@@ -80,7 +80,7 @@ class TProductCardHorizontal extends StatelessWidget {
            SizedBox(
             width: 172,
             child:  Padding(
-              padding: EdgeInsets.only(top: TSizes.sm,left: TSizes.sm),
+              padding: const EdgeInsets.only(top: TSizes.sm,left: TSizes.sm),
               child: Column(
                 children: [
                   const Column(
@@ -91,7 +91,7 @@ class TProductCardHorizontal extends StatelessWidget {
                       TBrandTitleWithVerifiedIcon(title: "Nike"),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
