@@ -42,7 +42,7 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwItems,),
 
               TProfileMenu(title: 'Name', value: 'Uzair Ahmad',onPressed: () {  },),
-              TProfileMenu(title: 'Username', value: 'uzair657',onPressed: () {  },),
+              TProfileMenu(title: 'Username', value: 'uzair69',onPressed: () {  },),
 
               const SizedBox(height: TSizes.spaceBtwItems,),
               const Divider(),
