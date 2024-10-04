@@ -3,7 +3,6 @@ import 'package:chasecart/features/personalization/screens/address/add_new_addre
 import 'package:chasecart/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:chasecart/utils/constants/colors.dart';
 import 'package:chasecart/utils/constants/sizes.dart';
-import 'package:chasecart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -13,8 +12,8 @@ class UserAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ///DaRK Mode
-    final dark = THelperFunctions.isDarkMode(context);
-    final isDark = THelperFunctions.isDarkMode(context);
+    // final dark = THelperFunctions.isDarkMode(context);
+    // final isDark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: ()=> Get.to(()=> const AddNewAddressScreen()),

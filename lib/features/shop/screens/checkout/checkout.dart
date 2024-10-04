@@ -11,7 +11,6 @@ import 'package:chasecart/utils/constants/image_strings.dart';
 import 'package:chasecart/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../common/widgets/products/cart/coupon_widget.dart';
 import '../../../../utils/helpers/helper_functions.dart';

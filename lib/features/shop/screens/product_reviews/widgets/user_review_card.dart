@@ -28,7 +28,7 @@ class UserReviewCard extends StatelessWidget {
             IconButton(onPressed: (){}, icon:const Icon(Icons.more_vert)),
           ],
         ),
-        SizedBox(height: TSizes.spaceBtwItems,),
+        const SizedBox(height: TSizes.spaceBtwItems,),
         /// Review
         Row(
           children: [
@@ -78,7 +78,7 @@ class UserReviewCard extends StatelessWidget {
             ),
           ),
         ),
-       SizedBox(height: TSizes.spaceBtwSections),
+       const SizedBox(height: TSizes.spaceBtwSections),
       ],
     );
   }
