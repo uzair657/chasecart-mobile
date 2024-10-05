@@ -33,7 +33,7 @@ class AuthenticationRepository extends GetxController {
 
 
   /*--------------------- EMAIL & PASSWORD SIGN IN ---------------------*/
-  /// Sign In using Email Auth
+  /// Sign In using Email Auth I will design and add it later
   /// Register Using Email Auth
   /// ReAuthenticate User
   /// Email Verification
