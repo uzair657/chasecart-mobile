@@ -1,5 +1,6 @@
-import 'package:chasecart/features/authentication/screens/signup/verify_email.dart';
+import 'package:chasecart/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:chasecart/features/authentication/screens/signup/widgets/terms_condition_checkbox.dart';
+import 'package:chasecart/utils/validators/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -15,7 +16,9 @@ class TSignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignupController());
     return Form(
+      key: controller.signupFormKey,
       child: Column(
         children: [
           /// Name
@@ -23,6 +26,8 @@ class TSignupForm extends StatelessWidget {
             children: [
               Expanded(
                 child: TextFormField(
+                  controller: controller.firstName,
+                  validator: (value)=>TValidator.validateEmptyText('FirstName', value),
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: TTexts.firstName,
@@ -32,6 +37,8 @@ class TSignupForm extends StatelessWidget {
               const SizedBox(width: TSizes.spaceBtwInputFields),
               Expanded(
                 child: TextFormField(
+                  controller: controller.lastName,
+                  validator: (value)=>TValidator.validateEmptyText('LastName', value),
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: TTexts.lastName,
@@ -46,6 +53,8 @@ class TSignupForm extends StatelessWidget {
 
           /// UserName
           TextFormField(
+            controller: controller.username,
+            validator: (value)=>TValidator.validateEmptyText('Username', value),
             expands: false,
             decoration: const InputDecoration(
                 labelText: TTexts.username,
@@ -57,6 +66,8 @@ class TSignupForm extends StatelessWidget {
 
           /// Email
           TextFormField(
+            controller: controller.email,
+            validator: (value)=>TValidator.validateEmail(value),
             expands: false,
             decoration: const InputDecoration(
                 labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct)),
@@ -67,6 +78,8 @@ class TSignupForm extends StatelessWidget {
 
           /// Phone Number
           TextFormField(
+            controller: controller.phoneNumber,
+            validator: (value)=>TValidator.validatePhoneNumber(value),
             expands: false,
             decoration: const InputDecoration(
                 labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
@@ -77,6 +90,8 @@ class TSignupForm extends StatelessWidget {
 
           /// Password
           TextFormField(
+            controller: controller.password,
+            validator: (value)=>TValidator.validatePassword(value),
             expands: false,
             decoration: const InputDecoration(
                 labelText: TTexts.password,
@@ -93,7 +108,7 @@ class TSignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () => Get.to(() => const VerifyEmailScreen()),
+              onPressed: () => controller.signup(),
               child: const Text(TTexts.createAccount),
             ),
           )
