@@ -14,11 +14,11 @@ class AuthenticationRepository extends GetxController {
   @override
   void onReady(){
     FlutterNativeSplash.remove();
-    ScreenRedirect();
+    screenRedirect();
   }
 
   /// Function To show Relevant Screen
-  ScreenRedirect()async{
+  screenRedirect()async{
     /// Local Storage
     if(kDebugMode){
       print("============== GetStorage ==============");
@@ -33,7 +33,7 @@ class AuthenticationRepository extends GetxController {
 
 
   /*--------------------- EMAIL & PASSWORD SIGN IN ---------------------*/
-  /// Sign In using Email Auth I will design and add it later
+  /// Sign In using Email Auth
   /// Register Using Email Auth
   /// ReAuthenticate User
   /// Email Verification

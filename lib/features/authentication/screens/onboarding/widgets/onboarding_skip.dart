@@ -1,4 +1,4 @@
-import 'package:chasecart/features/authentication/controllers.onboarding/onboarding_controller.dart';
+import 'package:chasecart/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
