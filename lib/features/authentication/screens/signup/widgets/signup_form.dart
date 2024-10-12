@@ -8,7 +8,6 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
-
 class TSignupForm extends StatelessWidget {
   const TSignupForm({
     super.key,
@@ -27,7 +26,8 @@ class TSignupForm extends StatelessWidget {
               Expanded(
                 child: TextFormField(
                   controller: controller.firstName,
-                  validator: (value)=>TValidator.validateEmptyText('FirstName', value),
+                  validator: (value) =>
+                      TValidator.validateEmptyText('FirstName', value),
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: TTexts.firstName,
@@ -38,7 +38,8 @@ class TSignupForm extends StatelessWidget {
               Expanded(
                 child: TextFormField(
                   controller: controller.lastName,
-                  validator: (value)=>TValidator.validateEmptyText('LastName', value),
+                  validator: (value) =>
+                      TValidator.validateEmptyText('LastName', value),
                   expands: false,
                   decoration: const InputDecoration(
                       labelText: TTexts.lastName,
@@ -54,7 +55,8 @@ class TSignupForm extends StatelessWidget {
           /// UserName
           TextFormField(
             controller: controller.username,
-            validator: (value)=>TValidator.validateEmptyText('Username', value),
+            validator: (value) =>
+                TValidator.validateEmptyText('Username', value),
             expands: false,
             decoration: const InputDecoration(
                 labelText: TTexts.username,
@@ -67,7 +69,7 @@ class TSignupForm extends StatelessWidget {
           /// Email
           TextFormField(
             controller: controller.email,
-            validator: (value)=>TValidator.validateEmail(value),
+            validator: (value) => TValidator.validateEmail(value),
             expands: false,
             decoration: const InputDecoration(
                 labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct)),
@@ -79,7 +81,7 @@ class TSignupForm extends StatelessWidget {
           /// Phone Number
           TextFormField(
             controller: controller.phoneNumber,
-            validator: (value)=>TValidator.validatePhoneNumber(value),
+            validator: (value) => TValidator.validatePhoneNumber(value),
             expands: false,
             decoration: const InputDecoration(
                 labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
@@ -89,14 +91,21 @@ class TSignupForm extends StatelessWidget {
           ),
 
           /// Password
-          TextFormField(
-            controller: controller.password,
-            validator: (value)=>TValidator.validatePassword(value),
-            expands: false,
-            decoration: const InputDecoration(
+          Obx(
+              ()=> TextFormField(
+              controller: controller.password,
+              validator: (value) => TValidator.validatePassword(value),
+              expands: false,
+              obscureText: controller.hidePassword.value,
+              decoration: InputDecoration(
                 labelText: TTexts.password,
-                prefixIcon: Icon(Iconsax.password_check),
-                suffixIcon: Icon(Iconsax.eye_slash)),
+                prefixIcon: const Icon(Iconsax.password_check),
+                suffixIcon: IconButton(
+                  onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                  icon:  Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
+                ),
+              ),
+            ),
           ),
           const SizedBox(height: TSizes.spaceBtwSections),
 
