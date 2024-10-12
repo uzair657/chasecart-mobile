@@ -1,3 +1,7 @@
+import 'package:chasecart/utils/constants/image_strings.dart';
+import 'package:chasecart/utils/helpers/network_manager.dart';
+import 'package:chasecart/utils/popups/full_screen_loader.dart';
+import 'package:chasecart/utils/popups/loaders.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -5,6 +9,8 @@ import 'package:get/get.dart';
 class SignupController extends GetxController{
   static SignupController get instance => Get.find();
   /// Variables
+  final hidePassword = true.obs; // Hide or show password
+  final privacyPolicy = true.obs; // Hide or show privacy policy checkbox
   final firstName = TextEditingController(); //First name input field controller
   final lastName = TextEditingController(); //Last name input field controller
   final username = TextEditingController(); //username input field controller
@@ -16,10 +22,13 @@ class SignupController extends GetxController{
   Future<void> signup()async{
     try{
       /// Start Loading
-
+      TFullScreenLoader.openLoadingDialog('We are Processing your information', TImages.productsIllustration);
       /// Check Internet is working or not
+      final isConnected = await NetworkManager.instance.isConnected();
+      if(!isConnected) return;
 
       /// Form Validation
+      if(!signupFormKey.currentState!.validate()) return;
 
       /// Privacy policy check
 
@@ -32,10 +41,10 @@ class SignupController extends GetxController{
 
     }catch(e){
       /// Show Errors to the user
-
+      TLoaders.errorSnackBar(title: 'oh Snap!', message: e.toString());
     }finally{
       /// Remove Loader from the screen
-
+      TFullScreenLoader.stopLoading();
     }
   }
 
